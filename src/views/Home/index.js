@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React, { Component } from 'react'
+import { View, Text, FlatList } from 'react-native'
+import { CardItem } from '~/components'
+import { connect } from 'react-redux'
 
 class Home extends Component {
   constructor(props) {
@@ -10,11 +12,20 @@ class Home extends Component {
 
   render() {
     return (
-      <View>
-        <Text> Home View </Text>
+      <View style={{ flex: 1}}>
+        <FlatList 
+          data={this.props.cards}
+          renderItem={({item}) => <CardItem value={item}/>}
+          keyExtractor={(item => String(item))}
+          numColumns={3}
+        />
       </View>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({
+  cards: state.cards.cards
+})
+
+export default connect(mapStateToProps)(Home)
