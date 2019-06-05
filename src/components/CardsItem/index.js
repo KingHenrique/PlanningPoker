@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, View, Dimensions, TouchableOpacity } from 'react-native';
 
-const CardItem = ({ value }) => (
-  <TouchableOpacity style={styles.container}>
+const CardItem = ({ index, value, cardSelection }) => (
+  <TouchableOpacity onPress={() => cardSelection(index)} style={styles.container}>
     <View style={styles.content}>
       <Text style={styles.text}>{value}</Text>
     </View>
