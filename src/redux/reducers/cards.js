@@ -1,6 +1,6 @@
 export const Types = {
-  GET_CARDS: "cards/GET_CARDS",
-  CARD_SELECTION: "cards/CARD_SELECTION"
+  GET_CARDS: 'cards/GET_CARDS',
+  CARD_SELECTION: 'cards/CARD_SELECTION'
 }
 
 export const Creators = {
@@ -18,21 +18,8 @@ export const Creators = {
 }
 
 const INITIAL_STATE = {
-  cards:[
-    "0",
-    "1/2",
-    "1",
-    "2",
-    "3",
-    "5",
-    "8",
-    "13",
-    "20",
-    "40",
-    "100",
-    "?",
-  ],
-  selectedCard: ""
+  cards: ['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', '?'],
+  selectedCard: ''
 }
 
 export default function cards(state = INITIAL_STATE, action) {
@@ -41,8 +28,8 @@ export default function cards(state = INITIAL_STATE, action) {
       return { ...state }
     case Types.CARD_SELECTION:
       let selectedCard = state.cards[action.payload]
-      console.log({selectedCard});
-      
+      console.log({ selectedCard })
+
       return { ...state, selectedCard }
     default:
       return state
