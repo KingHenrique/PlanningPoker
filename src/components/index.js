@@ -1,5 +1,4 @@
 import CardItem from './CardsItem'
+import Header from './Header'
 
-export {
-  CardItem
-}
+export { CardItem, Header }
