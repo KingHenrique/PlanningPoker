@@ -7,13 +7,13 @@ const AppNavigator = createStackNavigator({
   Home: {
     screen: views.Home,
     navigationOptions: ({ navigation }) => ({
-      header: <Header />
+      header: <Header view={'Home'} navigation={navigation} />
     })
   },
   SelectedCard: {
     screen: views.SelectedCard,
     navigationOptions: ({ navigation }) => ({
-      header: <Header />
+      header: <Header view={'Selected'} navigation={navigation} />
     })
   }
 })
