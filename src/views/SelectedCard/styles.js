@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
   },
   cardContainer: {
     width: 320,
-    height: 470,
-    marginBottom: 88
+    height: 470
+    // marginBottom: 88
   },
   content: {
     flex: 1,
