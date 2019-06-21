@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'avenir',
+    textAlign: 'center',
     fontSize: 18,
     fontWeight: 'bold',
     color: 'white'
