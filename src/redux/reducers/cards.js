@@ -28,8 +28,6 @@ export default function cards(state = INITIAL_STATE, action) {
       return { ...state }
     case Types.CARD_SELECTION:
       let selectedCard = state.cards[action.payload]
-      console.log({ selectedCard })
-
       return { ...state, selectedCard }
     default:
       return state

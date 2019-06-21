@@ -3,6 +3,7 @@ import { View, Text, FlatList } from 'react-native'
 import { CardItem } from '~/components'
 import { Creators as cardsActions } from '~/redux/reducers/cards'
 import { connect } from 'react-redux'
+import styles from './styles'
 
 class Home extends Component {
   constructor(props) {
@@ -17,9 +18,11 @@ class Home extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: '#f37321' }}>
-        <View style={{ marginHorizontal: 16 }}>
+      <View style={styles.container}>
+        <View style={styles.content}>
           <FlatList
+            contentContainerStyle={styles.list}
+            style
             data={this.props.cards}
             renderItem={({ item, index }) => (
               <CardItem
