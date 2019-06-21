@@ -11,7 +11,9 @@ const DefineStyle = (view, navigation) => {
         <View style={styles.contentInformation}>
           <Text style={styles.text}>planning poker</Text>
         </View>
-        <TouchableOpacity style={styles.contentInformation}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Info')}
+          style={styles.contentInformation}>
           <Icon name="info-outline" style={styles.icon} size={24} />
         </TouchableOpacity>
       </View>

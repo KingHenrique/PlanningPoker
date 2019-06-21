@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, I } from 'react-native'
+import { Text, View, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import CardFlip from 'react-native-card-flip'
 import styles from './styles'

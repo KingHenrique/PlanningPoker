@@ -15,6 +15,12 @@ const AppNavigator = createStackNavigator({
     navigationOptions: ({ navigation }) => ({
       header: <Header view={'Selected'} navigation={navigation} />
     })
+  },
+  Info: {
+    screen: views.Info,
+    navigationOptions: ({ navigation }) => ({
+      header: <Header view={'Info'} navigation={navigation} />
+    })
   }
 })
 
